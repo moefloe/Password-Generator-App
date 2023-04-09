@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <main id="main-container">
+        <header>
+            <h1>Generate a
+                <span class="green-header">random password</span>
+            </h1>
+            <p>Never use an insecure password again.</p>
+        </header>
+        <div class="label-container">
+            <label for="pwd-length">Length (8-16):</label>
+            <input type="number" id="pwd-length" min="8" max="16" value="8">
+
+            <button id="generate-btn">Generate Passwords</button>
+        </div>
+        <div id="copied-txt">Copied!</div>
+
+        <div class="output-container">
+            <div class="fields-container">
+                <p id="password-el1"></p>
+                <span id="save-icon1"><iconify-icon inline icon="heroicons:document-duplicate" style="color: #4adf86;"
+                        width="28"></iconify-icon></span>
+            </div>
+            <div class="fields-container">
+                <p id="password-el2"></p>
+                <span id="save-icon2"><iconify-icon inline icon="heroicons:document-duplicate" style="color: #4adf86;"
+                        width="28"></iconify-icon></span>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
+</body>
+
+</html>

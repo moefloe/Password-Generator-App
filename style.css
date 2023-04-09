@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    background: #1c1c1c;
+    font-family: 'Inter', 'sans-serif', 'arial';
+}
+
+p {
+    color: white;
+    font-size: 0.5em;
+}
+
+h1 {
+    font-family: 'Karla', 'sans-serif', 'arial';
+    font-weight: 700;
+}
+
+#main-container {
+    padding: 0 3em;
+    width: 34.5em;
+    height: 34.5em;
+    background-color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3.5em auto;
+}
+
+header {
+    text-align: left;
+    line-height: 1em;
+    font-size: 2.4em;
+}
+
+header span {
+    color: #4adf86;
+    display: block;
+}
+
+header p {
+    color: #d5d4d8;
+    margin-top: 10px;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+    .label-container {
+        font-size: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin-top: 3em;
+        margin-bottom: 2.5em;
+    }
+}
+
+
+.label-container input {
+    border: none;
+    border-radius: 2px;
+    width: 2.5em;
+    padding: 2px 0 2px 4px;
+    margin: 0 100px 0 8px;
+}
+
+#copied-txt {
+    display: none;
+}
+
+#copied-txt.txt-copied {
+    display: block;
+    color: #4adf86;
+    text-align: center;
+}
+
+#generate-btn {
+    width: 12em;
+    height: 2.5em;
+    padding: 0 17px 0 15px;
+    background-color: #10b981;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-shadow: 0.5px 0 0.75px black;
+    align-self: flex-end;
+}
+
+#generate-btn:hover,
+#save-icon1:hover,
+#save-icon2:hover {
+    cursor: pointer;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.85em;
+    border-top: 2px solid #2f3e53;
+}
+
+.fields-container {
+    border: none;
+    border-radius: 4px;
+    width: 13.75em;
+    height: 2.5em;
+    background-color: #273549;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px 0 22px;
+    margin-top: 50px;
+}
+
+.fields-container p {
+    font-size: 1em;
+}

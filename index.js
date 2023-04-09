@@ -5,43 +5,36 @@ const pwdField2 = document.getElementById("password-el2")
 const generateBtn = document.getElementById("generate-btn")
 const copyIcon1 = document.getElementById("save-icon1")
 const copyIcon2 = document.getElementById("save-icon2")
+const copiedText = document.getElementById('copied-txt')
 
+generateBtn.addEventListener("click", function () {
+    pwdField1.textContent = generatePassword()
+    pwdField2.textContent = generatePassword()
+})
 
+copyIcon1.addEventListener("click", function () { copyText(pwdField1) })
+copyIcon2.addEventListener("click", function () { copyText(pwdField2) })
 
-// function to generate two new passwords when the Generate button is clicked
+// function to generate a random password
 
-generateBtn.addEventListener('click', function generate() {
-    pwdField1.textContent = ''
-    pwdField2.textContent = ''
+function generatePassword() {
     let pwdLength = document.getElementById("pwd-length").value;
-
-    let copiedText = document.getElementById("copied-txt")
-
+    let password = ""
     for (let i = 0; i < pwdLength; i++) {
-        let pwd1 = Math.floor(Math.random() * characters.length)
-        let pwd2 = Math.floor(Math.random() * characters.length)
-        pwdField1.textContent += characters[pwd1]
-        pwdField2.textContent += characters[pwd2]
+        password += characters[Math.floor(Math.random() * characters.length)]
     }
-})
+    return password
+}
 
-// Adding event listeners to copy the pwd content to clipboard
-// Also set timeout on the copied text to make it disappear after delay
+// Function to copy the pwd content to clipboard
+// The function also set timeout on the copied text to make it disappear after delay
 
-copyIcon1.addEventListener('click', () => {
-    navigator.clipboard.writeText(pwdField1.textContent)
-    copiedText.classList.add("txt-copied")
+function copyText(passwordField) {
+    navigator.clipboard.writeText(passwordField.textContent)
+    copiedText.style.visibility = "visible"
     setTimeout(() => {
-        copiedText.classList.remove('txt-copied');
-    }, 1000);
-})
-
-copyIcon2.addEventListener('click', () => {
-    navigator.clipboard.writeText(pwdField2.textContent)
-    copiedText.classList.add("txt-copied")
-    setTimeout(() => {
-        copiedText.classList.remove('txt-copied');
-    }, 1000);
-})
+        copiedText.style.visibility = "hidden"
+    }, 1500);
+}
 
 

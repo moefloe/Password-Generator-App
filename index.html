@@ -18,33 +18,40 @@
             <h1>Generate a
                 <span class="green-header">random password</span>
             </h1>
-            <p>Never use an insecure password again.</p>
+            <p id="header-p">Never use an insecure password again.</p>
         </header>
-        <div class="label-container">
-            <label for="pwd-length">Length (8-16):</label>
-            <input type="number" id="pwd-length" min="8" max="16" value="8">
-
+        <div class="input-container">
+            <label id="pwd-label" for="pwd-length">Length</label>
+            <input id="pwd-length" type="number" min="8" max="16" value="8">
             <button id="generate-btn">Generate Passwords</button>
         </div>
-        <div id="copied-txt">Copied!</div>
 
-        <div class="output-container">
-            <div class="fields-container">
-                <p id="password-el1"></p>
+        <section class="output-container">
+            <div class="field-group">
+                <div class="fields-container">
+                    <p id="password-el1"></p>
+                </div>
                 <span id="save-icon1"><iconify-icon inline icon="heroicons:document-duplicate" style="color: #4adf86;"
                         width="28"></iconify-icon></span>
             </div>
-            <div class="fields-container">
-                <p id="password-el2"></p>
+            <div class="field-group">
+                <div class="fields-container">
+                    <p id="password-el2"></p>
+                </div>
                 <span id="save-icon2"><iconify-icon inline icon="heroicons:document-duplicate" style="color: #4adf86;"
                         width="28"></iconify-icon></span>
             </div>
-        </div>
-
+        </section>
+        <div id="copied-txt" class="txt-copied">Copied!</div>
     </main>
+
+    <footer>
+        <p>Coded by Alpha Bah for Scrimba Frontend Dev Bootcamp</p>
+    </footer>
 
     <script src="index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.4/iconify-icon.min.js"></script>
 </body>
+
 
 </html>
